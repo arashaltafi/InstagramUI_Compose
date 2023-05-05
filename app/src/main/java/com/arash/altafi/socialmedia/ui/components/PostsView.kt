@@ -9,12 +9,8 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.outlined.*
 import androidx.compose.runtime.*
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.Center
-import androidx.compose.ui.Alignment.Companion.CenterStart
 import androidx.compose.ui.Alignment.Companion.CenterVertically
-import androidx.compose.ui.Alignment.Companion.Start
-import androidx.compose.ui.Alignment.Companion.TopCenter
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
@@ -24,7 +20,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.arash.altafi.socialmedia.R
-import com.arash.altafi.socialmedia.data.MockData.posts
 import com.arash.altafi.socialmedia.models.Post
 import com.arash.altafi.socialmedia.ui.theme.AppGray
 import com.arash.altafi.socialmedia.ui.theme.RedColor
@@ -144,8 +139,7 @@ fun PostItem(post: Post) {
 
         Spacer(modifier = Modifier.height(8.dp))
 
-        Row(
-        ) {
+        Row {
             IconButton(
                 onClick = {
                     liked = !liked
@@ -172,13 +166,15 @@ fun PostItem(post: Post) {
                 )
             }
 
-            Spacer(modifier = Modifier
-                .height(8.dp)
-                .weight(1f))
+            Spacer(
+                modifier = Modifier
+                    .height(8.dp)
+                    .weight(1f)
+            )
 
             IconButton(
                 onClick = {
-                    Toast.makeText(context , "Share" , Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "Share", Toast.LENGTH_SHORT).show()
                 }
             ) {
                 Icon(

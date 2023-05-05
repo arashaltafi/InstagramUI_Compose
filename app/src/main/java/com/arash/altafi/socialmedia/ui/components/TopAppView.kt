@@ -29,7 +29,7 @@ import com.arash.altafi.socialmedia.ui.theme.VioletColor
 fun TopAppView() {
 
     Row(
-        Modifier.padding(10.dp , 0.dp)
+        Modifier.padding(10.dp, 0.dp)
     ) {
 
         Text(

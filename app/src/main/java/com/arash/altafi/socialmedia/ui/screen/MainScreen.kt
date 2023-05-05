@@ -1,5 +1,6 @@
 package com.arash.altafi.socialmedia.ui.screen
 
+import android.annotation.SuppressLint
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.*
 import androidx.navigation.NavType
@@ -10,6 +11,7 @@ import androidx.navigation.navArgument
 import com.arash.altafi.socialmedia.ui.components.BottomNavigationView
 import com.arash.altafi.socialmedia.ui.components.TopAppView
 
+@SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
 fun MainScreen() {
 
@@ -49,7 +51,7 @@ fun MainScreen() {
                 fullScreen = false
             }
             composable(
-                route= "showStory/{index}",
+                route = "showStory/{index}",
                 arguments = listOf(navArgument("index") {
                     type = NavType.IntType
                 })

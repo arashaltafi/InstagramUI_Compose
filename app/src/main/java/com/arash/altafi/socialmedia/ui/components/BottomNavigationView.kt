@@ -11,7 +11,6 @@ import androidx.navigation.NavController
 import com.arash.altafi.socialmedia.ui.theme.AppGray
 import com.arash.altafi.socialmedia.ui.theme.Dark
 import com.arash.altafi.socialmedia.ui.theme.MainColor
-import com.arash.altafi.socialmedia.ui.theme.RedColor
 import com.arash.altafi.socialmedia.ui.utils.NavigationItem
 
 @Composable
@@ -34,7 +33,7 @@ fun BottomNavigationView(navController: NavController) {
         items.forEach {
             BottomNavigationItem(
                 icon = {
-                    Icon(painter = painterResource(id = it.icon) , contentDescription = it.title)
+                    Icon(painter = painterResource(id = it.icon), contentDescription = it.title)
                 },
                 selectedContentColor = MainColor,
                 unselectedContentColor = AppGray,
@@ -47,7 +46,7 @@ fun BottomNavigationView(navController: NavController) {
                                 saveState = true
                             }
                         }
-                        launchSingleTop= true
+                        launchSingleTop = true
                         restoreState = true
                     }
                 }

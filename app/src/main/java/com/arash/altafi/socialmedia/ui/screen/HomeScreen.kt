@@ -15,15 +15,15 @@ import com.arash.altafi.socialmedia.ui.components.StoriesView
 import com.arash.altafi.socialmedia.ui.theme.LightGray
 
 @Composable
-fun HomeScreen(navController : NavController) {
+fun HomeScreen(navController: NavController) {
 
     Column {
-        StoriesView(MockData.stories , navController = navController)
+        StoriesView(MockData.stories, navController = navController)
 
         Spacer(modifier = Modifier.height(7.dp))
 
         Divider(
-            modifier = Modifier.padding(15.dp , 0.dp),
+            modifier = Modifier.padding(15.dp, 0.dp),
             color = LightGray,
             thickness = 1.dp
         )

@@ -9,7 +9,6 @@ import androidx.compose.ui.layout.ContentScale
 import com.arash.altafi.socialmedia.data.MockData
 import com.skydoves.landscapist.glide.GlideImage
 
-@OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun ShowStoryScreen(index: Int) {
 

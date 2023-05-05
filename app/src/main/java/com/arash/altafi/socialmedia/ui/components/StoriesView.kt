@@ -26,8 +26,8 @@ import com.arash.altafi.socialmedia.ui.theme.VioletColor
 import com.skydoves.landscapist.glide.GlideImage
 
 @Composable
-fun StoriesView(stories: ArrayList<Story> , navController : NavController) {
-    LazyRow(Modifier.padding(5.dp,0.dp)) {
+fun StoriesView(stories: ArrayList<Story>, navController: NavController) {
+    LazyRow(Modifier.padding(5.dp, 0.dp)) {
 
         items(stories.size + 1) { index ->
             if (index == 0) {
@@ -38,7 +38,7 @@ fun StoriesView(stories: ArrayList<Story> , navController : NavController) {
                     index = 0
                 )
             } else {
-                StoryItem(stories[index - 1], index = index - 1 , navController = navController)
+                StoryItem(stories[index - 1], index = index - 1, navController = navController)
             }
         }
     }
@@ -46,7 +46,7 @@ fun StoriesView(stories: ArrayList<Story> , navController : NavController) {
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
-fun StoryItem(story: Story, index : Int , navController: NavController, isMySelf: Boolean = false) {
+fun StoryItem(story: Story, index: Int, navController: NavController, isMySelf: Boolean = false) {
 
     val context = LocalContext.current
 
